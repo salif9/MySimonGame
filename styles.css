@@ -1,0 +1,65 @@
+body {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: orange;
+  background-image:url( "./picss/pisc/pic01.png");
+  background-repeat:no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+#GameLevelTitle {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5%;
+  color: #FEF2BF;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.Button {
+  margin: 10px;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border: 60px solid rgb(239, 248, 247);
+  border-radius: 50%;
+  box-shadow: 0 9px #999;
+}
+
+.game-over {
+  background-color: rgb(243, 242, 236);
+  opacity: 0.8;
+}
+
+.red {
+  background-color: rgb(14, 252, 252);
+}
+
+.green {
+  background-color: rgb(191, 192, 245);
+}
+
+.blue {
+  background-color: rgb(241, 179, 7);
+}
+
+.yellow {
+  background-color: yellow;
+}
+.black {
+  background-color: rgb(10, 10, 10);
+}
+
+.ButtonPressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
