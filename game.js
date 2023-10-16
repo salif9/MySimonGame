@@ -8,6 +8,8 @@ var level = 0;
 //$("h1").css("color","red");
 
 //The game start when the use press any key
+
+
 $(document).keypress(function() {
 
     if(!started){
@@ -28,6 +30,7 @@ $(".Button").click(function(){
     animatePress(userChosenColour);
     
     checkAnswer(userClickedPattern.length-1);
+   
     });
 
     
@@ -39,7 +42,7 @@ $(".Button").click(function(){
 
 
 function checkAnswer(currentLevel){
-
+ 
     if(gamePattern[currentLevel] === userClickedPattern[currentLevel]){
     
         console.log("success ");
@@ -51,7 +54,10 @@ function checkAnswer(currentLevel){
         },1000 );
     }
     
- } else{
+ }
+
+
+ else{
         console.log("wrong");
         setTimeout(function(){
            playSound("fastEnd");
@@ -67,6 +73,7 @@ function checkAnswer(currentLevel){
         startOver();
     }
     
+   
  }
     
 
@@ -103,8 +110,21 @@ setTimeout(function () {
 }
 
 function startOver(){
+    gameleve(level);
     level=0;
     gamePattern=[];
     started=false
+    
 }
 
+function gameleve(currentLevel){
+
+if(currentLevel<3){
+    $("#GameLevelTitle").text("you have a very bad memory like an Ant 🐜 you can't remember anything by yourself presss a button to play again your level is---> " + level);
+}
+
+else if(currentLevel>3 && currentLevel>6){
+    $("#GameLevelTitle").text("you have a normal memory nothing special your level is---> " + level);
+   }
+
+}
